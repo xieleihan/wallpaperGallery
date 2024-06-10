@@ -1,0 +1,198 @@
+/* 公用样式 */
+/* start */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    pointer-events: none;
+    user-select: none;
+}
+
+li {
+    list-style: none;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.fl{
+    float: left;
+}
+
+.fr{
+    float: right;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #171717;
+    overflow: hidden;
+}
+/* end */
+
+/* 业务样式 */
+/* start */
+.photos {
+    position: absolute;
+    flex-direction: column;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.photos_line {
+    font-size: 1px;
+    height: 342em;
+    margin-bottom: 48em;
+    flex-shrink: 0;
+}
+
+.photos_line_photo {
+    font-size: 1px;
+    width: 234em;
+    height: 100%;
+    margin-right: 36em;
+    border-radius: 15em;
+    background-color: #ccc;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.photos_line_photo img {
+    height: 100%;
+    transition: 0.3s ease;
+}
+
+.photos_line_photo:hover img {
+    transform: scale(1.2);
+}
+
+@media screen and (max-aspect-ratio: 1.5/1) {
+
+    .photos_line,
+    .photos_line_photo {
+        font-size: 2px;
+    }
+}
+
+@media screen and (max-aspect-ratio: 0.8/1) {
+
+    .photos_line,
+    .photos_line_photo {
+        font-size: 2.8px;
+    }
+}
+
+.nav{
+    position: fixed;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: fit-content;
+    height: 3.2em;
+    background-color: rgba(255, 255, 255, .65);
+    backdrop-filter: blur(5px);
+    color: black;
+    z-index: 999;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1em;
+}
+
+.nav ul li{
+    width: fit-content;
+    height: 100%;
+    margin: 0 1em 0 1em;
+    font-size: 1dvw;
+    padding: 0.7em;
+    transition: all .5s;
+}
+
+.nav ul li:hover{
+    cursor: pointer;
+    color: white;
+    background-color: rgba(0, 0, 0, .75);
+    border-radius: 10px;
+}
+
+#canvas{
+    transition: all 1s;
+    opacity: 0;
+    display: none;
+}
+/* end */
+
+/* 代码瀑布流 */
+/* start */
+.codeWaterFill {
+    width: 100dvw;
+    height: 130dvh;
+    min-height: 800px;
+    position: relative;
+    opacity: 0;
+    display: none;
+    transition: all 1s;
+}
+
+.codeWaterFill .codeWaterFillBox {
+    width: 100%;
+    height: 100%;
+}
+
+.codeWaterFill .codeWaterFillBox canvas {
+    width: 100%;
+    height: 100%;
+}
+
+.codeWaterFill .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-65%, -50%);
+    color: black;
+    width: fit-content;
+    height: auto;
+    /* 保留空格和换行符 */
+    white-space: pre;
+    font-family: 'Courier New', 'monospace';
+    /* 使用等宽字体以保持字符的相对宽度 */
+    font-size: 50px;
+    transition: all 0.5s;
+    /* 调整字体大小以适应字符画 */
+    line-height: 1.2;
+    /* 调整行高以适应字符画 */
+}
+
+/* end */
+
+/* 重复样式 */
+/* start */
+.activityItem{
+    color: white;
+    background-color: rgba(0, 0, 0, .75);
+    border-radius: 10px;
+}
+/* end */
