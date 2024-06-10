@@ -18,6 +18,9 @@
 <img src="https://fastly.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="45" alt="javascript logo"  />
 </div>
 
+> 🚧:页面分别使用不同方法实现的,一部分使用操作DOM元素,一个使用canvas绘制.
+> **直接操作DOM对性能影响很大,使用绘制能实现高性能**
+
 ## 项目部署
 
 `https://images.southaki.top`即可访问到
